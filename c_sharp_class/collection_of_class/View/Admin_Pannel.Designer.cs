@@ -32,6 +32,7 @@
             this.btn_insert = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_select
@@ -73,11 +74,22 @@
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
             // 
+            // btn_logout
+            // 
+            this.btn_logout.Location = new System.Drawing.Point(2, 280);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(136, 37);
+            this.btn_logout.TabIndex = 4;
+            this.btn_logout.Text = "Logout";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
             // Admin_Pannel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 592);
+            this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_insert);
@@ -94,5 +106,6 @@
         private System.Windows.Forms.Button btn_insert;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_logout;
     }
 }

@@ -23,7 +23,9 @@ namespace collection_of_class.View
         Controller.User_Account_Controller cuac;
         private void btn_register_Click(object sender, EventArgs e)
         {
+            cuac=new Controller.User_Account_Controller();  
             string name, password;
+           
             try
             {
                 name = txt_name.Text;
@@ -32,12 +34,20 @@ namespace collection_of_class.View
                 {
                     MessageBox.Show("empty value");
                 }
-                else
+                else if (cuac.read_custinfo(name, password) == false) 
                 {
                     cuac = new Controller.User_Account_Controller();
                     cuac.create_user_account(name, password);
-                    //this.Hide();
+                    Login l = new Login();
+                    l.Show();
+                    this.Hide();
                 }
+                else
+                {
+                    MessageBox.Show("Account Already Exist");
+                }
+                    
+                
 
                
             }

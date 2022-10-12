@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="CONNECT.cs" />
     <Compile Include="Controller\Customer_information_Controller.cs" />
+    <Compile Include="Controller\Table_Reservation_Controller.cs" />
     <Compile Include="Controller\User_Account_Controller.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

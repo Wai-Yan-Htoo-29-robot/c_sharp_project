@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_account = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_reserve_table = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -74,23 +74,24 @@
             this.btn_account.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_account.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btn_logout
             // 
-            this.button1.BackColor = System.Drawing.Color.FloralWhite;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(-4, 596);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 49);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_logout.BackColor = System.Drawing.Color.FloralWhite;
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Location = new System.Drawing.Point(-4, 596);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(180, 49);
+            this.btn_logout.TabIndex = 4;
+            this.btn_logout.Text = "Logout";
+            this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FloralWhite;
             this.panel4.Controls.Add(this.btn_reserve_table);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btn_logout);
             this.panel4.Controls.Add(this.btn_account);
             this.panel4.Location = new System.Drawing.Point(0, 57);
             this.panel4.Name = "panel4";
@@ -140,7 +141,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_account;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btn_reserve_table;
         private System.Windows.Forms.Panel panel5;

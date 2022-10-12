@@ -27,7 +27,7 @@ namespace collection_of_class.View.customer
             cdate = dateTimePicker1.Value.Date.ToString("d");
             ctime = cbo_time.Text;
             cservice = cbo_service.Text;
-           
+
 
             Controller.Customer_information_Controller ccic = new Controller.Customer_information_Controller();
             ccic.create_user_account(cname,ccontact,caddress,cdate,ctime,cservice);

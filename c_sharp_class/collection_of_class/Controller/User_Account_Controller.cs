@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using collection_of_class.View;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,14 +67,40 @@ namespace collection_of_class.Controller
             //delete data
         }
 
-        public void read_custinfo(string cName,string cPassword)
+        public bool read_custinfo(string cName,string cPassword)
         {
             //select from database
-            sql = "select name,passwrod from user_account where name='"+cName+"' and passwrod='"+cPassword+"' ";
-            db_conn = new CONNECT();
-            command = db_conn.mySqlConnection.CreateCommand();
-            command.CommandText = sql;
-            MessageBox.Show(command.ToString());
+            string n="", p="";
+            MySqlDataReader reader;
+            sql = "select name,passwrod from user_account where name='" + cName + "' and passwrod='" + cPassword + "' ";
+            try
+            {
+                db_conn = new CONNECT();
+                command = db_conn.mySqlConnection.CreateCommand();
+                command.CommandText = sql;
+                reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    n = reader.GetValue(0).ToString();
+                    p = reader.GetValue(1).ToString();
+                }
+            }
+            catch (Exception error_message)
+            {
+                MessageBox.Show("Error occur : " + error_message.Message);
+            }
+
+           
+            if(n==cName && p==cPassword)
+            {
+                return true;
+            }
+            else
+            {
+               
+                return false;
+            }
+
 
            // db_conn.mySqlConnection.Close();
         }

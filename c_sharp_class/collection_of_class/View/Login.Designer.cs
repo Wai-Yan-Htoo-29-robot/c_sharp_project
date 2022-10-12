@@ -35,6 +35,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_login = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.rtxt_register_account = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +76,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.rtxt_register_account);
             this.panel1.Controls.Add(this.btn_login);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(41, 71);
@@ -101,6 +103,17 @@
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Name";
+            // 
+            // rtxt_register_account
+            // 
+            this.rtxt_register_account.AutoSize = true;
+            this.rtxt_register_account.Location = new System.Drawing.Point(52, 248);
+            this.rtxt_register_account.Name = "rtxt_register_account";
+            this.rtxt_register_account.Size = new System.Drawing.Size(132, 20);
+            this.rtxt_register_account.TabIndex = 3;
+            this.rtxt_register_account.TabStop = true;
+            this.rtxt_register_account.Text = "Register Account";
+            this.rtxt_register_account.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.rtxt_register_account_LinkClicked);
             // 
             // Login
             // 
@@ -130,5 +143,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel rtxt_register_account;
     }
 }
