@@ -66,14 +66,14 @@ namespace collection_of_class.Controller
             //delete data
         }
 
-        public void read_custinfo()
+        public void read_custinfo(string cName,string cPassword)
         {
             //select from database
-            sql = "select * from user_account";
+            sql = "select name,passwrod from user_account where name='"+cName+"' and passwrod='"+cPassword+"' ";
             db_conn = new CONNECT();
             command = db_conn.mySqlConnection.CreateCommand();
             command.CommandText = sql;
-            
+            MessageBox.Show(command.ToString());
 
            // db_conn.mySqlConnection.Close();
         }
