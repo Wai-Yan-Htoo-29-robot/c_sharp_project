@@ -73,6 +73,7 @@
             this.btn_account.TabIndex = 1;
             this.btn_account.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_account.UseVisualStyleBackColor = false;
+            this.btn_account.Click += new System.EventHandler(this.btn_account_Click);
             // 
             // btn_logout
             // 
@@ -129,6 +130,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Welcome";
             this.Text = "Welcome";
+            this.Load += new System.EventHandler(this.Welcome_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);

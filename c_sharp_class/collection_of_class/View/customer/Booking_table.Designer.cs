@@ -39,9 +39,9 @@
             this.btn_cancel = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cbo_service = new System.Windows.Forms.ComboBox();
             this.cbo_time = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -140,14 +140,23 @@
             this.panel2.Size = new System.Drawing.Size(651, 49);
             this.panel2.TabIndex = 29;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(3, 12);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(293, 26);
+            this.dateTimePicker1.TabIndex = 2;
+  //          this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // cbo_service
             // 
             this.cbo_service.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_service.FormattingEnabled = true;
             this.cbo_service.Items.AddRange(new object[] {
-            "couple (2 people)",
-            "family (3-6 people)",
-            "group (6-20)"});
+            "couple ( 1 - 2 )",
+            "family ( 3 - 6 )",
+            "group ( 6 - 20 )"});
             this.cbo_service.Location = new System.Drawing.Point(459, 12);
             this.cbo_service.Name = "cbo_service";
             this.cbo_service.Size = new System.Drawing.Size(183, 28);
@@ -170,14 +179,6 @@
             this.cbo_time.Size = new System.Drawing.Size(151, 28);
             this.cbo_time.TabIndex = 2;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(293, 26);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
             // Booking_table
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -197,6 +198,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Booking_table";
             this.Text = "Booking_table";
+            this.Load += new System.EventHandler(this.Booking_table_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

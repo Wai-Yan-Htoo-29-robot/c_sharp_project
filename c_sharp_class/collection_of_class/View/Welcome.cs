@@ -34,5 +34,15 @@ namespace collection_of_class.View
             l.Show();
             this.Hide();
         }
+
+        private void btn_account_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Welcome_Load(object sender, EventArgs e)
+        {
+            btn_account.Text = Login.name;
+        }
     }
 }
