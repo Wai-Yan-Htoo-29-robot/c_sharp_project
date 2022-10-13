@@ -44,5 +44,10 @@ namespace collection_of_class.View
         {
             btn_account.Text = Login.name;
         }
+
+        private void btn_checkout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

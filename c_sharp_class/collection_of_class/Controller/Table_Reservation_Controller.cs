@@ -14,13 +14,13 @@ namespace collection_of_class.Controller
         public MySqlDataAdapter adapter;
         public MySqlCommand command;
         string sql = "";
-        public void table_reserve(string cName, string cDate, string cTime, string cPrice)
+        public void table_reserve(string cName, string cContact, string cDate, string cTime, string cReserve_sevice,string cPrice)
         {
             //insert into database
             //Notes : when we do process with database whatever you want(crud = create,read,update,delete)
             //Have many way I will describe two way for insert, other are also too
 
-            sql = "insert into table_order(name,date,time,price) values('" + cName + "','" + cDate + "','" + cTime + "','" + cPrice + "')";
+            sql = "insert into table_order(name,contact,date,time,reserve_title,price) values('" + cName + "','"+cContact+"','" + cDate + "','" + cTime + "','"+cReserve_sevice+"','" + cPrice + "')";
             try
             {
                 //first way
@@ -51,11 +51,12 @@ namespace collection_of_class.Controller
        
         public bool order_confirm(string cName,string cContact,string cDate,string cTime,string cReserve_sevice)
         {
+            
             string n="", d="", t="", c="", r="";
             MySqlDataReader reader;
             //select from database
-            sql = "select name,contact,date,time,reserve_title from table_order where name='"+cName
-                +"' and contact='"+cContact+"' and date='"+cDate+"' and time='"+cTime+"' and reserve_title='"+cReserve_sevice+"'";
+            sql = "select name,contact,date,time,reserve_title from table_order where name='" + cName
+                + "' and contact='" + cContact + "' and date='" + cDate + "' and time='"+cTime+"' and reserve_title='"+cReserve_sevice+"'";
             try
             {
                 db_conn = new CONNECT();
@@ -65,10 +66,14 @@ namespace collection_of_class.Controller
                 while (reader.Read())
                 {
                     n = reader.GetValue(0).ToString();
-                    d = reader.GetValue(1).ToString();
-                    t = reader.GetValue(2).ToString();
+                    c = reader.GetValue(1).ToString();
+                    d = reader.GetValue(2).ToString();
+                    t = reader.GetValue(3).ToString();
+                    r = reader.GetValue(4).ToString();
+                    //MessageBox.Show($"{reader.GetValue(0)}{reader.GetValue(1)}{reader.GetValue(2)}{reader.GetValue(3)}{reader.GetValue(4)}");
 
                 }
+                //MessageBox.Show($" {n}\n{c}\n{d}\n{t}\n{r}");
             }
             catch (Exception error_message)
             {
@@ -76,14 +81,15 @@ namespace collection_of_class.Controller
             }
 
 
-            if (n == cName && d == cDate && t==cTime)
+            if (n != cName && d != cDate && t!=cTime && c!=cContact && r!=cReserve_sevice)
             {
-                return false;
+                
+                return true;
             }
             else
             {
-
-                return true;
+                
+                return false;
             }
 
             // db_conn.mySqlConnection.Close();

@@ -26,7 +26,7 @@ namespace collection_of_class.View.customer
         private void btn_confirm_Click(object sender, EventArgs e)
         {
            
-            string cname, cdate, ctime,ccontact, caddress, cservice;
+            string cname="", cdate="", ctime="",ccontact="", caddress="", cservice="";
             float price=0;
             cname = txt_name.Text;
             ccontact = txt_contact.Text;
@@ -47,17 +47,19 @@ namespace collection_of_class.View.customer
                 price = 30000;
             }
 
-            
-            if (ctrc.order_confirm(cname, ctime, cdate) == true)
-            {
-                MessageBox.Show("Are you sure ? \nPlease reconfirm order ");
-            }
-            else
+
+            if (ctrc.order_confirm(cname, ccontact, cdate, ctime, cservice) == true)
             {
                 ccic.create_user_account(cname, ccontact, caddress, cdate, ctime, cservice);
 
                 ctrc = new Controller.Table_Reservation_Controller();
-                ctrc.table_reserve(cname, cdate, ctime, price.ToString());
+                ctrc.table_reserve(cname,ccontact, cdate, ctime,cservice ,price.ToString());
+               
+
+            }
+            else
+            {
+                MessageBox.Show("Are you sure ? \nPlease reconfirm order ");
             }
 
 
