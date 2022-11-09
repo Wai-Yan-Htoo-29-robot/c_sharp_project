@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,7 +34,11 @@ namespace collection_of_class.View
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-
+            CONNECT dbconn = new CONNECT();
+            MySqlCommand command;
+            string query = "update customer_information set contact='" + "091234555555" + "', address='" + "Yangon" + "' where name='" + "Lucifer" + "'";
+            command = new MySqlCommand(query, dbconn.mySqlConnection);
+            command.ExecuteNonQuery();
         }
 
         private void btn_logout_Click(object sender, EventArgs e)

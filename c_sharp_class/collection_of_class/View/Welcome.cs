@@ -47,7 +47,12 @@ namespace collection_of_class.View
 
         private void btn_checkout_Click(object sender, EventArgs e)
         {
-
+            CheckOut c_k_t = new CheckOut();
+            c_k_t.TopLevel = false;
+            c_k_t.AutoScroll = true;
+            panel5.Controls.Add(c_k_t);
+            c_k_t.BringToFront();
+            c_k_t.Show();
         }
     }
 }

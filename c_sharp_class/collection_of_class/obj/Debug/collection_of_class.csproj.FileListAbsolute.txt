@@ -79,3 +79,4 @@ C:\src\project\repo\c_sharp_project\c_sharp_class\collection_of_class\obj\Debug\
 C:\src\project\repo\c_sharp_project\c_sharp_class\collection_of_class\obj\Debug\collection_of_class.exe
 C:\src\project\repo\c_sharp_project\c_sharp_class\collection_of_class\obj\Debug\collection_of_class.pdb
 C:\src\project\repo\c_sharp_project\c_sharp_class\collection_of_class\obj\Debug\collection_of_class.View.Login.resources
+C:\src\project\repo\c_sharp_project\c_sharp_class\collection_of_class\obj\Debug\collection_of_class.View.CheckOut.resources

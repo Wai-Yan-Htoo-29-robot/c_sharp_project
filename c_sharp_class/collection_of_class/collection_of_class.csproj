@@ -113,6 +113,12 @@
     <Compile Include="View\Admin_Pannel.Designer.cs">
       <DependentUpon>Admin_Pannel.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\customer\Booking_table.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Admin_Pannel.resx">
       <DependentUpon>Admin_Pannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\customer\Booking_table.resx">
       <DependentUpon>Booking_table.cs</DependentUpon>

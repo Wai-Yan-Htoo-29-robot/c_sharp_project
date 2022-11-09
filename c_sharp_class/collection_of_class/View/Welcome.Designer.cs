@@ -34,9 +34,9 @@
             this.btn_account = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_checkout = new System.Windows.Forms.Button();
             this.btn_reserve_table = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_checkout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -101,6 +101,19 @@
             this.panel4.Size = new System.Drawing.Size(177, 644);
             this.panel4.TabIndex = 4;
             // 
+            // btn_checkout
+            // 
+            this.btn_checkout.BackColor = System.Drawing.Color.FloralWhite;
+            this.btn_checkout.FlatAppearance.BorderSize = 0;
+            this.btn_checkout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_checkout.Location = new System.Drawing.Point(-2, 145);
+            this.btn_checkout.Name = "btn_checkout";
+            this.btn_checkout.Size = new System.Drawing.Size(180, 49);
+            this.btn_checkout.TabIndex = 6;
+            this.btn_checkout.Text = "Checkout";
+            this.btn_checkout.UseVisualStyleBackColor = false;
+            this.btn_checkout.Click += new System.EventHandler(this.btn_checkout_Click);
+            // 
             // btn_reserve_table
             // 
             this.btn_reserve_table.BackColor = System.Drawing.Color.FloralWhite;
@@ -120,19 +133,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(716, 645);
             this.panel5.TabIndex = 5;
-            // 
-            // btn_checkout
-            // 
-            this.btn_checkout.BackColor = System.Drawing.Color.FloralWhite;
-            this.btn_checkout.FlatAppearance.BorderSize = 0;
-            this.btn_checkout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_checkout.Location = new System.Drawing.Point(-2, 157);
-            this.btn_checkout.Name = "btn_checkout";
-            this.btn_checkout.Size = new System.Drawing.Size(180, 49);
-            this.btn_checkout.TabIndex = 6;
-            this.btn_checkout.Text = "Checkout";
-            this.btn_checkout.UseVisualStyleBackColor = false;
-            this.btn_checkout.Click += new System.EventHandler(this.btn_checkout_Click);
             // 
             // Welcome
             // 

@@ -70,6 +70,9 @@ namespace collection_of_class.View.customer
             txt_name.Text = Login.name;
         }
 
-     
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

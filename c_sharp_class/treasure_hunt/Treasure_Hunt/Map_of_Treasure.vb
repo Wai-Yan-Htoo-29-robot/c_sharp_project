@@ -203,11 +203,12 @@
     Private Sub Map_of_Treasure_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         If Form1.cbo_level.SelectedIndex = 0 Then
-            chance = 40
+            chance = 40 'easy
         ElseIf Form1.cbo_level.SelectedIndex = 1 Then
-            chance = 35
+            chance = 35 'medium
         ElseIf Form1.cbo_level.SelectedIndex = 2 Then
-            chance = 30
+            chance = 30 'hard
         End If
+
     End Sub
 End Class
